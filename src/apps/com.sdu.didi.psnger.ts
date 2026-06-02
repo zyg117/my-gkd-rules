@@ -54,6 +54,22 @@ export default defineGkdApp({
     },
     {
       key: 4,
+      name: '全屏广告-弹窗广告(webview)',
+      desc: '关闭WebView广告弹窗，按钮vid=close_dialog',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.didi.sdk.app.MainActivity',
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[vid="close_dialog"][desc="关闭弹窗"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/1780401187433',
+        },
+      ],
+    },
+    {
+      key: 5,
       name: '全屏广告-[升级一键付款]弹窗',
       desc: '点击[跳过]',
       rules: [
@@ -70,7 +86,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
+      key: 6,
       name: '其他-追加车型提示',
       rules: [
         {
